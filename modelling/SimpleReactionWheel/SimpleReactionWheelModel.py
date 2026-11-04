@@ -2,9 +2,8 @@
 import math
 import matplotlib.pyplot as plt
 
-# ==========================================
+
 # 1. SYSTEM PARAMETERS
-# ==========================================
 
 # Moment of inertia of the platform (kg*m^2)
 J_platform = 0.003
@@ -21,10 +20,7 @@ target_angle = 30
 # Convert degrees to radians for calculations
 target_rad = math.radians(target_angle)
 
-
-# ==========================================
 # 2. CALCULATE MANEUVER TIME
-# ==========================================
 
 # Reaction torque acts opposite to motor torque.
 # Magnitude of platform angular acceleration:
@@ -41,10 +37,7 @@ total_time = 2 * half_time
 
 print(f"Total maneuver time: {total_time:.3f} s")
 
-
-# ==========================================
 # 3. INITIAL CONDITIONS
-# ==========================================
 
 # Platform starts at 0 degrees and at rest
 theta = 0.0            # Platform angle (rad)
@@ -63,10 +56,7 @@ angles = []
 velocities = []
 wheel_speeds = []
 
-
-# ==========================================
 # 4. SIMULATION LOOP
-# ==========================================
 
 for i in range(steps + 1):
 
@@ -108,10 +98,7 @@ for i in range(steps + 1):
     # Update reaction-wheel speed
     wheel_speed += alpha_wheel * dt
 
-
-# ==========================================
 # 5. PLOT RESULTS
-# ==========================================
 
 fig, axes = plt.subplots(3, 1, figsize=(9, 9), sharex=True)
 
@@ -138,10 +125,8 @@ axes[2].grid(True)
 plt.tight_layout()
 plt.show()
 
-
-# ==========================================
 # 6. FINAL RESULTS
-# ==========================================
+
 
 print(f"Final angle: {math.degrees(theta):.2f} degrees")
 print(f"Final angular velocity: {math.degrees(omega):.3f} deg/s")
