@@ -9,7 +9,6 @@ I am building a small, single-axis reaction-wheel system to test how a satellite
 
 A platform will rotate on a low-friction vertical bearing. A brushless motor and flywheel will be mounted on the platform. When the motor speeds up or slows down the flywheel, the platform experiences torque in the opposite direction. A controller will use an angle sensor to rotate the platform to a selected position and bring it to rest.
 
-This is a **benchtop prototype**, not flight hardware.
 
 ## How it will work
 
@@ -18,7 +17,6 @@ This is a **benchtop prototype**, not flight hardware.
 3. Send a command for +30 degrees, -30 degrees, or 0 degrees from a computer.
 4. The controller adjusts the reaction wheel to move and stop the platform at the target angle.
 5. Record the platform angle, wheel speed, and controller output so the results can be compared with a simulation.
-6. Disable the motor before handling the system.
 
 The wheel and platform will rotate about the same vertical axis. The platform's angle must be measured relative to the fixed base, not relative to the wheel.
 
@@ -32,9 +30,8 @@ The wheel and platform will rotate about the same vertical axis. The platform's 
 
 ## Main limits
 
-The first version will only control **one rotational axis**. It will run indoors from a nominal 12 V supply. It will not simulate orbital motion, operate in vacuum, or meet spacecraft flight standards.
+The first version will only control one rotational axis. It will run indoors from a nominal 12 V supply. 
 
-Before running the flywheel, its mount, balance, speed limit, and protective enclosure will need a mechanical safety review. The emergency stop must cut motor power independently of software. A disconnected motor may keep spinning, so the enclosure must stay closed until the rotor stops. Power and data cables must also be arranged so they do not noticeably twist the platform.
 
 ## Project goal
 
