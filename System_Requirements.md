@@ -42,9 +42,3 @@ Unless otherwise stated, tests use a horizontal, enclosed platform starting at r
 | **STR-002** | The system shall support both a **PD controller** and a **state-feedback controller**, with separate recorded results for the same maneuver. Both must meet SYS-002. |
 | **STR-003** | An IMU-based angular-rate estimate shall have an **RMSE <=5 degrees/s** against an encoder-based reference during +/-30 degree maneuvers. |
 
-## Notes
-
-- These limits are subject to simulation and motor sizing. If a target changes, record why and update the verification matrix.
-- A guarded rotor and a mechanical safety review are required before powered spin tests. **SYS-015 checks access only; it does not prove the enclosure can contain fragments from a failed flywheel.**
-- Motor power-off does not mean the flywheel has stopped.
-- No requirement is marked as passed until it has supporting test data or other documented evidence.
